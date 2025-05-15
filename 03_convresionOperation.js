@@ -52,6 +52,54 @@ console.log(booleanIdsLoggedIn_b); //true
 
 
 let someNumber = 33
-let stringNumber = string(someNumber);
+let stringNumber = String(someNumber);
 console.log(stringNumber); //33
 console.log(typeof stringNumber);// string
+
+
+
+
+//*****************************Operations**************************** */
+
+let value = 3
+let negVAlue = -value
+console.log(negVAlue) //-3
+
+//basic operatins
+console.log(2+2);
+console.log(2-2);
+console.log(2*2);
+console.log(2**3); //power
+console.log(2/2);
+console.log(2%2);
+
+//basic string add
+let str1="hello"
+let str2=" rishabh"
+let str3 = str1+str2 //hello rishabh
+
+//but
+console.log("1"+2); //12
+console.log(1+"2"); //12
+console.log("1" +2 + 2) //122
+console.log(1 +2 + "2") //32
+
+console.log(true); //true
+console.log(+true); //1 just because + converts it into number
+console.log(+""); //0
+
+let num1,num2, num3
+num1=num2=num3=2+2 // this is a method of assignning rge same value to all three
+
+
+//prefix and postfix operation
+let counter = 100;
+counter++
+console.log(counter); //101
+++counter
+console.log(counter); //101
+//both values are same but there is a lot difference because in prefix it will
+//change the value first and in postfix it will change the value after operations
+
+
+
