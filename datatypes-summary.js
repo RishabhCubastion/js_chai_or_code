@@ -46,3 +46,34 @@ console.log("Hello World");
 //string = string
 //function = function or function object
 //symbol = symbol
+
+
+
+
+
+//memories
+//stack and heap
+//In all primitivetype we have stack
+//stack means that you will get the copy of variable declared by you 
+//In all non primitive we have heap memory
+//heap means that you will get the reference (reference of original value) of variable declared by you 
+let myName = "Rishabh"
+let anotherName = myName;
+anotherName = "Raj"
+
+console.log(myName);
+console.log(anotherName);
+//boh have different value
+
+
+let userOne = {
+    email : "rishabhrak2257@gmail.com",
+    upi: "user@Ybl"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "hitesh@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
