@@ -46,3 +46,21 @@ console.log(tinderUser.hasOwnProperty("isLoggedIn")); //it will tell that thius 
 
 
 //destructuring of object
+const course = {
+    coursename : "js in hindi",
+    price: "999",
+    courseInstructor : "Rishabh"
+}
+
+//to access the elements we have right now is: course.courseInstructor
+//another way of accessing courseInstructor is: 
+const {courseInstructor} = course
+console.log(courseInstructor); //Rishabh
+//if we thinbk that the name courseInstructor is too long then also we can rename them with smaller values
+const {courseInstructor: instructor} = course
+console.log(instructor); //Rishabh
+
+//{} is the way to destructure object by course.courseInstructor to {courseInstructor}
+
+//JSON is also an object but if we declare it with any variable then it is object and if we will not declare it then it will be treated as JSON
+//in JSON both key and value is in double quotes
