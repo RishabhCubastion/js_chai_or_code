@@ -23,10 +23,10 @@ const JsUser = {
 //How to access Object
 //in most cases people will learn that i have only one way
 console.log(JsUser.age); //18
-//by above method we have no way to access fullName but by below we can access fullName as well
- //but we have one more way 
+//by above method we have no way to access fullName which is key in the form of string  but by below we can access fullName as well
+//but we have one more way 
  console.log(JsUser[age]); //age is not defined
-console.log(JsUser["age"]); //age is not defined
+console.log(JsUser["age"]);
 
 
 
@@ -34,22 +34,35 @@ console.log(JsUser["age"]); //age is not defined
 const mySym = Symbol("key1")
 //to add that symbol in the object we have syntax as:
 const newObj = {[mySym]:"myKey1"} //--use the square bracket
+console.log(newObj[mySym]);
 
 
-JsUser.email = "rishabh@google.com"
+
+JsUser.email = "rishabh@google.com" //if we want to change the email
 //if we want to freeze the object
-Object.freeze(JsUser);
+Object.freeze(JsUser); // by this method we frrezed the object
 JsUser.email = "rishabh@microsoft.com"
 console.log(JsUser); // rishabh@google.com"
 
 
+
+
+//Functions in JS
 JsUser.greeting = function(){
     console.log("Hello JS User");
-    
 }
 
-console.log(JsUser.greeting); //undefined
-console.log(JsUser.greeting()); //JsUser.greeting is not a function 
+
+//FIRST OF ALL UNFREEZE THE JSUSER OBJECT
+console.log(JsUser.greeting); //[Function (anonymous)] -- function is not executed, we get refernce only
+console.log(JsUser.greeting()); //Hello JS User
+
+JsUser.greetingTwo = function(){
+    console.log(`Hello JS user, ${this.name}`); //if we want to refer same object then we can write this
+}
+console.log(JsUser.greetingTwo());
+
+
 
 
  
