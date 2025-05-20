@@ -43,3 +43,46 @@ function loginUserMessage(username){
     }
     return `${username} just logged in`
 }
+
+
+
+//REST OPERATOR
+function calculateCartPrice(num1){
+return num1;
+}
+//there is a problem like if we have too many arguments like if we have 200,300 and 400 as well
+
+console.log(calculateCartPrice(200,300,400)) //200
+//so, only first value is readable and rest all is not readabvale in this case
+
+//So, for that case we are going to use rest operator (khudra operator matlab khulle mn)
+function calculateCartPrice1(...num1){
+    return num1;
+}
+console.log(calculateCartPrice(200,300,400)) //[200,300,400]
+
+
+//How to Pass Object in function
+const user = {
+    username: "Rishabh",
+    price: 199
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and Price is ${anyobject.price}`)
+}
+
+//handleObject(user);
+handleObject({ //we also have one more way to do this
+    username: "sam",
+    price: "399"
+})
+
+
+//How to handle array
+const myNewArray = [200,400,100,600];
+function returnSecondValue(getArray){
+    return getArray[0];
+}
+console.log(returnSecondValue(myNewArray))
+console.log(returnSecondValue([200,400,600,800])) // by this method we can do this
